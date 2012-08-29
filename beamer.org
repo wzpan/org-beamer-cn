@@ -1,0 +1,112 @@
+#+TITLE:     用 org-mode 写 Beamer
+#+AUTHOR:    Joseph Pan
+#+EMAIL:     cs.wzpan@gmail.com
+#+DATE:      2012-07-25 三
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT:
+#+startup: beamer
+#+LATEX_CLASS: beamer
+#+BEAMER_FRAME_LEVEL: 2
+#+LaTeX_CLASS_OPTIONS: [xcolor=svgnames,bigger,presentation]
+#+LATEX_HEADER:\usecolortheme[named=FireBrick]{structure}\setbeamercovered{transparent}\setbeamertemplate{caption}[numbered]\setbeamertemplate{blocks}[rounded][shadow=true] \usetheme{Darmstadt} \usepackage{tikz}\usepackage{xeCJK}\usepackage{amsmath}\setmainfont{Times New Roman}\setCJKmainfont[BoldFont={Adobe Heiti Std},ItalicFont={Adobe Kaiti Std}]{Adobe Heiti Std}\setCJKsansfont{Adobe Heiti Std}\setCJKmonofont{Adobe Kaiti Std}\usepackage{verbatim}\institute{beamerinstitute} \graphicspath{{figures/}} \definecolor{lstbgcolor}{rgb}{0.9,0.9,0.9} \usepackage{listings} \usepackage{fancyvrb}\usepackage{xcolor}\lstset{escapeinside=`',frameround=ftft,language=C,breaklines=true,keywordstyle=\color{blue!70},commentstyle=\color{red!50!green!50!blue!50},frame=shadowbox,backgroundcolor=\color{yellow!20},rulesepcolor=\color{red!20!green!20!blue!20}}
+
+* 介绍
+** 综述
+- org-mode 模板
+- beamer 的结构
+- beamer 的设置
+
+* 方法
+
+** 一页简单的幻灯片
+这页幻灯片以符号列表的形式排版一些简单的文字：
+- 第一，往往是最 @重要@ 的一点！
+- 第一点演示了如何给文字加上 Beamer 特有的 /alert/ 命令，以高亮文字。
+以上的列表也可以设为编号的，并且可以带子列表。
+
+** 一页更复杂的幻灯片
+这页幻灯片演示了生成 Beamer 的 block 的方法。下面展示一个带有标题的 block：
+*** Org mode 为什么能提高效率? 					  :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+    - org mode 意味着不必要记住 \LaTeX 的命令；
+    - 基于 ascii 纯文本，便于修改阅读。
+    - Emacs!
+
+    \hfill \(\qed\)
+    
+** 分栏（Columns）
+
+*** 一个 block 					      :B_ignoreheading:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_col: 0.6
+    :END:
+    - 这页幻灯片包含两栏：
+    - 左栏没有标题，只包含文字；
+    - 右栏包含图片并内嵌在一个 @example@ block 里。
+
+*** 插图 						    :BMCOL:B_example:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: example
+    :END:
+    #+ATTR_LATEX: width=.6\textwidth
+    #+CAPTION: 示例插图
+    [[file:emacs.png]]
+
+** 代码
+   :PROPERTIES:
+   :BEAMER_envargs: [t]
+   :END:
+   
+*** Octave 代码							      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: .6
+    :END:
+    
+#+begin_src octave :results output :exports both
+A = [1 2 ; 3 4]
+b = [1; 1];
+x = A\b
+#+end_src
+
+*** 输出结果 						      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :BEAMER_envargs: <2->
+    :END:
+
+#+results: octaveexample
+#+begin_example
+A =
+
+   1   2
+   3   4
+
+x =
+
+  -1
+   1
+
+#+end_example
+
+* 结论
+
+** 总结
+   - org 是一个不可思议的时间管理工具
+   - @但@ 它也一个写作和准备演讲的利器
+   - Beamer 是一个非常强大的制作幻灯片的 \LaTeX{} 宏包
+   - 两者联手，谁与争风！
+
