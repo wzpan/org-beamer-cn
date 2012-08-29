@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Org-beamer-cn by wzpan</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Org-beamer-cn</h1>
+        <h2>org-mode Simple Chinese Template for Beamer</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/wzpan/org-beamer-cn/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/wzpan/org-beamer-cn/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/wzpan/org-beamer-cn" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>org-beamer-cn</h1>
+
+<h1>org-mode Simple Chinese Template for Beamer</h1>
+
+<p>An org-mode template to generate LaTeX code for Beamer slides. Mainly designed for Chinese user.</p>
+
+<h2>Requirements:</h2>
+
+<ul>
+<li><a href="http://www.gnu.org/software/emacs/">Emacs</a></li>
+<li><a href="orgmode.org">org-mode</a></li>
+<li>
+<a href="www.tug.org/texlive/">TeXLive</a> or other LaTeX systems with Beamer package</li>
+<li>Adobe fonts
+
+<ul>
+<li>Adobe Heiti Std</li>
+<li>Adobe Kaiti Std</li>
+</ul>
+</li>
+</ul><h2>Features:</h2>
+
+<ul>
+<li>Use "Darmstadt" theme with a svg color scheme named "Firebrick";</li>
+<li>Use listings package to show source code. You may need to specify the language and set the escape symbol(`') between Chinese characters;</li>
+<li>Use XeCJK to handle Chinese. Adobe fonts are required. You can download it from <a href="http://ishare.iask.sina.com.cn/f/23186570.html">here</a>.</li>
+</ul><h2>How to use:</h2>
+
+<ol>
+<li>Open <strong>beamer.org</strong> file in Emacs and activate org-mode by typing <code>M-x org-mode</code>;</li>
+<li>Type <code>C-c C-e l</code> to generate <em>beamer.tex</em>;</li>
+<li>Open <strong>beamer.org</strong> and type <code>C-c C-c (M-x TeX-command-master)</code> and choose <code>XeLaTeX</code> to compile it. Then you will get the Beamer slides.</li>
+</ol>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
