@@ -24,4 +24,4 @@ An org-mode template to generate LaTeX code for Beamer slides. Mainly designed f
 
 1. Open **beamer.org** file in Emacs and activate org-mode by typing `M-x org-mode`;
 2. Type `C-c C-e l` to generate *beamer.tex*;
-3. Open **beamer.org** and type `C-c C-c (M-x TeX-command-master)` and choose `XeLaTeX` to compile it. Then you will get the Beamer slides.
+3. Open **beamer.tex** and type `C-c C-c (M-x TeX-command-master)` and choose `XeLaTeX` to compile it. Then you will get the Beamer slides.
