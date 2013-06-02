@@ -1,40 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
     <title>Org-beamer-cn by wzpan</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/wzpan/org-beamer-cn">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/wzpan/org-beamer-cn/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/wzpan/org-beamer-cn/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <header>
-      <div class="container">
-        <h1>Org-beamer-cn</h1>
-        <h2>org-mode Simple Chinese Template for Beamer</h2>
+    <div class="wrapper">
 
-        <section id="downloads">
-          <a href="https://github.com/wzpan/org-beamer-cn/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/wzpan/org-beamer-cn/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/wzpan/org-beamer-cn" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
+      <section>
+        <div id="title">
+          <h1>Org-beamer-cn</h1>
+          <p>org-mode Simple Chinese Template for Beamer</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/wzpan">wzpan</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
 
-    <div class="container">
-      <section id="main_content">
-        <h1>org-beamer-cn</h1>
+        <h1>
+<a name="org-beamer-cn" class="anchor" href="#org-beamer-cn"><span class="octicon octicon-link"></span></a>org-beamer-cn</h1>
 
-<h1>org-mode Simple Chinese Template for Beamer</h1>
+<h1>
+<a name="org-mode-simple-chinese-template-for-beamer" class="anchor" href="#org-mode-simple-chinese-template-for-beamer"><span class="octicon octicon-link"></span></a>org-mode Simple Chinese Template for Beamer</h1>
 
 <p>An org-mode template to generate LaTeX code for Beamer slides. Mainly designed for Chinese user.</p>
 
-<h2>Requirements:</h2>
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements:</h2>
 
 <ul>
 <li><a href="http://www.gnu.org/software/emacs/">Emacs</a></li>
@@ -48,25 +61,25 @@
 <li>Adobe Kaiti Std</li>
 </ul>
 </li>
-</ul><h2>Features:</h2>
+</ul><h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features:</h2>
 
 <ul>
 <li>Use "Darmstadt" theme with a svg color scheme named "Firebrick";</li>
 <li>Use listings package to show source code. You may need to specify the language and set the escape symbol(`') between Chinese characters;</li>
 <li>Use XeCJK to handle Chinese. Adobe fonts are required. You can download it from <a href="http://ishare.iask.sina.com.cn/f/23186570.html">here</a>.</li>
-</ul><h2>How to use:</h2>
+</ul><h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use:</h2>
 
 <ol>
 <li>Open <strong>beamer.org</strong> file in Emacs and activate org-mode by typing <code>M-x org-mode</code>;</li>
 <li>Type <code>C-c C-e l</code> to generate <em>beamer.tex</em>;</li>
 <li>Open <strong>beamer.org</strong> and type <code>C-c C-c (M-x TeX-command-master)</code> and choose <code>XeLaTeX</code> to compile it. Then you will get the Beamer slides.</li>
-</ol>
-
-<a href="https://github.com/wzpan/org-beamer-cn"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-
+</ol><p><a href="https://github.com/wzpan/org-beamer-cn"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a></p>
       </section>
-    </div>
 
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
